@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function validateOne()
+    {
+    	let x= document.getElementById("one").value;
+        if(x!="")
+        {
+        	document.getElementById("oneP").innerHTML="✓";
+        }
+        else
+        {
+        	document.getElementById("oneP").innerHTML="x";
+            alert("Fill the name");
+        }
+        
+        
+    }
+    function validateEm()
+    {
+    	let x= document.getElementById("three").value;
+        if(x.includes("@"))
+        {
+        	document.getElementById("threeP").innerHTML="✓";
+            
+        }
+        else
+        {
+        	document.getElementById("threeP").innerHTML="x";
+            alert("Enter valid mailid");
+        }
+    }
+</script>
+<title>Page Title</title>
+
+</head>
+<body>
+<img src="" width="100" height="100"/>
+<br />
+<form align="center"  action="https://www.google.com" onsubmit="return validateForm()">
+	<label for="one" >Name:</label>
+	<input id="one" type="text" onchange="validateOne()">
+    <span id="oneP"></span>
+    <br />
+    <br/>
+    <label for="three">email: </label>
+	<input id="three" type="email" onchange="validateEm()">
+    <span id="threeP"></span>
+    <br/>
+    <br />
+    <label for="two">Class: </label>
+	<input id="two" type="number" min=1 max=9 >
+    <br/>
+    <br />
+    <button align="center" type="submit">Submit</button>
+</form>
+</body>
+</html>
+
+
